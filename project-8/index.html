@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NEIGHBOURHOOD MAP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid adding_css">
+        <div class="row">
+            <div class="col-md-3 input">
+                <div>
+                    <h1>FIND A PLACE</h2>
+        <form>
+        <div>
+          <input type="text" class="inp_query" placeholder="Search your location here" data-bind = "value: search,valueUpdate: 'afterkeydown',event: {keyup: myfunc}" >
+        </div>
+      </form>
+      </div>
+      <div>
+    <ul data-bind="foreach: markerList">
+    <li data-bind="css:{active: selected},text: name, click: $parent.select_marker,visible:show"></li>
+    </ul>
+</div>
+</div>
+<div class="col-md-9">
+  <div id ="map"></div>
+<div>
+  <h4 data-bind = "text: errorDisplay"></h4>
+</div>
+
+</div>
+</div>
+</div>
+  <script src="js/app-knockout.js" rel="stylesheet">
+  </script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/lib/knockout-3.2.0.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBfo5IkI45z7vfD7qQdRjDudONawzoN3Uo&v=3&callback=displaying_map" onerror = "map_error()"> //it is used to load the map from googleapis.com bys using our own generated api key
+  </script>
+</body>
+</html>
