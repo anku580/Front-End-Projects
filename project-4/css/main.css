@@ -1,0 +1,41 @@
+body {
+  background-color: #A9A9A9;
+  font-family: "Overpass Mono", monospace;
+  font-weight: 300;
+}
+
+.text-thin {
+  color: #A9A9A9;
+}
+
+.alig {
+  text-align: right;
+}
+
+.about {
+  font-size: 15px;
+}
+
+img,
+.middle1,
+.middle2
+ {
+  width: 100%;
+}
+
+.logo_design {
+  width: 25%;
+  height: 25%;
+}
+
+.row {
+  padding-top: 10px;
+}
+
+.last {
+  padding-top: 40px;
+}
+
+.row3 {
+  text-align: center;
+}
